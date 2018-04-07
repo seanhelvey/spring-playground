@@ -29,9 +29,9 @@ public class HelloControllerTests {
 	}
 
 	@Test
-	public void shouldSquareAnInteger() throws Exception {
-		this.mvc.perform(get("/math/pi"))
-				.andExpect(status().isOk())
-				.andExpect(content().string("3.14"));
+	public void testIndexEndpoint() throws Exception {
+		this.mvc.perform(get("/vehicles?year=1987&doors=2"))
+				.andExpect(status().isOk());
 	}
+
 }
