@@ -21,9 +21,9 @@ public class MathController {
     }
 
     @GetMapping("/math/sum")
-    public Object calculate(@RequestParam Map querystring) {
+    public Object calculate(@RequestParam Map queryString) {
         int sum = 0;
-        for (Object value : querystring.values()){
+        for (Object value : queryString.values()){
             System.out.println(value);
             sum += Integer.valueOf((String) value);
         }
